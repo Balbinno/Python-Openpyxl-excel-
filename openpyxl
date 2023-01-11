@@ -1,0 +1,15 @@
+# Criara planilha
+
+book = openpyxl.Workbook()
+
+book.create_sheet('computadores')
+
+computador_page = book['computadores']
+
+# Adicionando dados
+computador_page.append(['Eletrônico', 'Memória ram', 'Preço'])
+computador_page.append(['Computador 1', '8gb Ram', 'R$ 2.500'])
+computador_page.append(['Computador 2', '16gb Ram', 'R$ 5.500'])
+computador_page.append(['Computador 3', '32gb Ram', 'R$ 8.500'])
+
+book.save('Meus Computadores.xlsx')
